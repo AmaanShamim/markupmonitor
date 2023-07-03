@@ -9,18 +9,18 @@ function App() {
   const toggleMode = () => {
     if (mode === "light") {
       setmode("dark");
-      document.body.style.backgroundColor = "#2e2948";
+      document.body.style.backgroundColor = "#291472";
       document.body.style.color = "White";
     } else {
       setmode("light");
-      document.body.style.backgroundColor = "White";
+      document.body.style.backgroundColor = "rgb(186 168 255)";
       document.body.style.color = "Black";
     }
   };
   return (
     <>
      <Navbar mode={mode} toggleMode={toggleMode} />
-     <InputPreviewer />
+     <InputPreviewer mode={mode} />
     </>
   );
 }

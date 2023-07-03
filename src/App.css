@@ -1,4 +1,9 @@
 @font-face {
-    font-family: "Library";
-    src: url("./Fonts/Library.otf") format("truetype");
-  }
+  font-family: "Library";
+  src: url("./Fonts/Library.otf") format("truetype");
+}
+
+body {
+  background-color: rgb(186 168 255);
+  color: black;
+}
