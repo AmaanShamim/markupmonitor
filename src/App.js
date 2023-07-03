@@ -1,8 +1,8 @@
-import './App.css';
+import "./App.css";
 import React, { useState } from "react";
-import InputPreviewer from './Components/InputPreviewer';
+import InputPreviewer from "./Components/InputPreviewer";
 import Navbar from "./Components/Navbar";
-
+import Footer from "./Components/Footer";
 
 function App() {
   const [mode, setmode] = useState("light"); // Whether dark mode is enabled or not.
@@ -19,8 +19,9 @@ function App() {
   };
   return (
     <>
-     <Navbar mode={mode} toggleMode={toggleMode} />
-     <InputPreviewer mode={mode} />
+      <Navbar mode={mode} toggleMode={toggleMode} />
+      <InputPreviewer mode={mode} />
+      <Footer />
     </>
   );
 }
