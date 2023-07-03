@@ -33,7 +33,11 @@ export default function InputPreviewer(props) {
     document.getElementById("preview").style.height = maxHeight + "px";
   }
   const markdownText = text;
-  const htmlText = marked(markdownText, { breaks: true });
+  const htmlText = marked(markdownText, {
+    breaks: true,
+    mangle: false,
+    headerIds: false,
+  });
 
   window.onload = function () {
     setEqualHeight();
@@ -77,11 +81,15 @@ export default function InputPreviewer(props) {
               }}
             >
               <i className="fa-solid fa-pen-to-square fa-2xl mx-2"></i>
-              <p style={{
-                marginBottom: "0px",
-                fontFamily: 'Oswald, sans-serif',
-                fontSize: "24px"
-              }}>EDITOR</p>
+              <p
+                style={{
+                  marginBottom: "0px",
+                  fontFamily: "Oswald, sans-serif",
+                  fontSize: "24px",
+                }}
+              >
+                EDITOR
+              </p>
             </div>
             {/* <div
               className="container"
@@ -147,11 +155,15 @@ export default function InputPreviewer(props) {
               }}
             >
               <i className="fa-solid fa-eye fa-2xl mx-2"></i>
-              <p style={{
-                marginBottom: "0px",
-                fontFamily: 'Oswald, sans-serif',
-                fontSize: "24px"
-              }}>PREVIEW</p>
+              <p
+                style={{
+                  marginBottom: "0px",
+                  fontFamily: "Oswald, sans-serif",
+                  fontSize: "24px",
+                }}
+              >
+                PREVIEW
+              </p>
             </div>
             {/* <div
               style={{
