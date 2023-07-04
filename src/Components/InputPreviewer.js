@@ -1,12 +1,24 @@
 import React from "react";
 import { useState } from "react";
 import { marked } from "marked";
+import hljs from "highlight.js";
 import Preview from "./Preview";
 
 export default function InputPreviewer(props) {
   const [text, setText] = useState(
-    "# Welcome to my React Markdown Previewer!\n\n## This is a sub-heading...\n### And here's some other cool stuff:\n\nHeres some code, `<div></div>`, between 2 backticks.\n\n ```\n// this is multi-line code:\n\nfunction anotherExample(firstLine, lastLine) {\nif (firstLine == '```' && lastLine == '```') {\nreturn multiLineCode;\n}\n}\n```\n\nYou can also make text **bold**... whoa!\nOr _italic_.\nOr... wait for it... **_both!_**\nAnd feel free to go crazy ~~crossing stuff out~~.\n\nThere's also [links](https://www.google.com), and\n> Block Quotes!\n\nAnd if you want to get really crazy, even tables:\n\nWild Header | Crazy Header | Another Header?\n------------ | ------------- | -------------\nYour content can | be here, and it | can be here....\nAnd here. | Okay. | I think we get it.\n\n- And of course there are lists.\n    - Some are bulleted.\n       - With different indentation levels.\n          - That look like this.\n\n\n1. And there are numbered lists too.\n1. Use just 1s if you want!\n1. And last but not least, let's not forget embedded images:\n\n![MarkupMonitor Logo](/src/Pictures/MMLogo.png)\n"
+    "# Welcome to React Markdown Previewer!\n\n## This is a sub-heading...\n### And here's some other cool stuff:\n\nHeres some code, `<div></div>`, between 2 backticks.\n\n ```\n// this is multi-line code:\n\nfunction anotherExample(firstLine, lastLine) {\n  if (firstLine == '```' && lastLine == '```') {\n    return multiLineCode;\n  }\n}\n```\n\nYou can also make text **bold**... whoa!\nOr _italic_.\nOr... wait for it... **_both!_**\nAnd feel free to go crazy ~~crossing stuff out~~.\n\nThere's also [links](https://www.google.com), and\n> Block Quotes!\n\nAnd if you want to get really crazy, even tables:\n\nWild Header | Crazy Header | Another Header?\n------------ | ------------- | -------------\nYour content can | be here, and it | can be here....\nAnd here. | Okay. | I think we get it.\n\n- And of course there are lists.\n    - Some are bulleted.\n       - With different indentation levels.\n          - That look like this.\n\n\n1. And there are numbered lists too.\n1. Use just 1s if you want!\n1. And last but not least, let's not forget embedded images:\n\n![MarkupMonitor Logo](https://i.ibb.co/CWYR8ws/MMLogo.png)\n"
   );
+  marked.setOptions({
+    highlight: function (code) {
+      return hljs.highlightAuto(code).value;
+    }
+  });
+  const markdownText = text;
+  const htmlText = marked(markdownText, {
+    breaks: true,
+    mangle: false,
+    headerIds: false,
+  });
 
   const handleOnChange = (event) => {
     setText(event.target.value);
@@ -32,12 +44,6 @@ export default function InputPreviewer(props) {
     document.getElementById("editor").style.height = maxHeight + "px";
     document.getElementById("preview").style.height = maxHeight + "px";
   }
-  const markdownText = text;
-  const htmlText = marked(markdownText, {
-    breaks: true,
-    mangle: false,
-    headerIds: false,
-  });
 
   window.onload = function () {
     setEqualHeight();
@@ -57,6 +63,7 @@ export default function InputPreviewer(props) {
           style={{
             width: "50%",
             margin: "10px",
+            border: props.mode === "light" ? "3px solid grey" : "3px solid darkgrey"
           }}
         >
           <div
@@ -69,6 +76,7 @@ export default function InputPreviewer(props) {
               display: "flex",
               flexDirection: "row",
               alignItems: "center",
+              borderBottom: props.mode === "light" ? "3px solid grey" : "3px solid darkgrey"
             }}
           >
             <div
@@ -121,7 +129,9 @@ export default function InputPreviewer(props) {
               backgroundColor:
                 props.mode === "light" ? "rgb(216 205 255)" : "rgb(94 70 179)",
               width: "100%",
-              minHeight: "auto",
+              minHeight: "1090px",
+              border: "none",
+              marginBottom: "-5px"
             }}
           ></textarea>
         </div>
@@ -131,7 +141,8 @@ export default function InputPreviewer(props) {
             backgroundColor:
               props.mode === "light" ? "rgb(216 205 255)" : "rgb(94 70 179)",
             overflowWrap: "break-word",
-            margin: "10px 10px 17px 10px",
+            margin: "10px",
+            border: props.mode === "light" ? "3px solid grey" : "3px solid darkgrey"
           }}
         >
           <div
@@ -140,8 +151,10 @@ export default function InputPreviewer(props) {
               color: props.mode === "light" ? "white" : "white",
               backgroundColor: "#212529",
               display: "flex",
+              height: "60px",
               flexDirection: "row",
               alignItems: "center",
+              borderBottom: props.mode === "light" ? "3px solid grey" : "3px solid darkgrey"
             }}
           >
             <div

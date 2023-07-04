@@ -1,49 +1,65 @@
-#preview h1{
-    border-bottom: 2px solid #000000;
-    font-weight: 700;
+#preview h1 {
+  border-bottom: 2px solid #000000;
+  font-weight: 700;
 }
 
-#preview h2{
-    padding-bottom: 4px;
-    border-bottom: 2px solid #000000;
-    font-weight: 600;
+#preview h2 {
+  padding-bottom: 4px;
+  border-bottom: 2px solid #000000;
+  font-weight: 600;
 }
 
-#preview h3{
-    font-size: 20px;
+#preview h3 {
+  font-size: 20px;
 }
 
-#preview img{
-    display: block;
-    max-width: 90%;
-    margin: 2rem auto;
+#preview img {
+  display: block;
+  max-width: 90%;
+  margin: 2rem auto;
 }
 
-#preview code{
-    padding: 4px;
-    color: #000000;
-    background-color: white;
-    font-weight: 700;
+#preview code {
+  padding: 4px;
+  color: #000000;
+  background-color: white;
+  font-weight: 700;
 }
 
-#preview pre{
-    padding: 10px;
-    background-color: white;
+#preview pre {
+  padding: 10px;
+  background-color: white;
 }
 
-#preview blockquote{
-    border-left: 4px solid black;
-    padding-left: 5px;
-    margin-left: 5px;
+#preview blockquote {
+  border-left: 4px solid black;
+  padding-left: 5px;
+  margin-left: 5px;
 }
 
-#preview td{
-    border: 2px solid black;
-    padding: 0px 4px 0px 4px;
+#preview td {
+  border: 2px solid black;
+  padding: 0px 4px 0px 4px;
 }
 
-#preview th{
-    border: 2px solid black;
-    padding: 0px 4px 0px 4px;
+#preview th {
+  border: 2px solid black;
+  padding: 0px 4px 0px 4px;
 }
 
+.hljs-comment {
+  color: green;
+  font-weight: 100;
+}
+
+.hljs-keyword{
+  color: #07a;
+}
+
+.hljs-title{
+    color: #dd4a68;
+} 
+
+.hljs-params{
+    color: grey;
+}
