@@ -9,7 +9,8 @@ export default function Navbar(props) {
         }}>Markup Monitor</h1>
         <div style={{
             display: "flex",
-            alignItems: "center"
+            alignItems: "center",
+            cursor: "pointer"
         }}>
           {props.mode==="dark"?<i onClick={props.toggleMode} className="fa-solid fa-sun fa-2xl"></i>:<i onClick={props.toggleMode} className="fa-solid fa-moon fa-2xl"></i>}
         </div>
