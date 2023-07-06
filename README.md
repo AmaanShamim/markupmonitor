@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Markup Monitor
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Markup Monitor is a web app that provides a live preview of markdown content. It allows users to input markdown text and instantly see the formatted output. This tool is helpful for users who want to visualize how their markdown content will appear before publishing.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Markdown input**: Users can enter their markdown content in a text editor.
+- **Live preview**: A real-time preview of the formatted output is displayed as users type or make changes to the markdown text.
+- **Markdown syntax highlighting**: Syntax highlighting is applied to the markdown text for better readability.
+- **Rendered output**: The final rendered version of the markdown content is shown, allowing users to see the exact appearance.
+- **Customization options**: Users can choose different themes or styles for the rendered output.
+- **Export functionality**: Users can export the rendered output as HTML or download it as a file.
+- **Error handling**: Syntax errors or issues with the markdown content are identified and notified to users.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React: JavaScript library for building user interfaces.
+- HTML/JSX: Markup languages for creating web pages and React components.
+- CSS: Styling and formatting the appearance of the web app.
+- Bootstrap: CSS framework for pre-designed components.
+- marked.js: JavaScript library for parsing and rendering markdown.
+- highlight.js: Syntax highlighting library for code blocks.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+1. Clone the repository: `git@github.com:AmaanShamim/markupmonitor.git`
+2. Navigate to the project directory: `cd markup-monitor`
+3. Install the dependencies: `npm install`
+4. Start the development server: `npm start`
+5. Open your web browser and visit: `http://localhost:3000`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contributing
 
-### `npm run build`
+Contributions are welcome! If you'd like to contribute to the Markup Monitor project, please follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix: `git checkout -b my-feature`
+3. Make your changes and commit them: `git commit -m "Add my feature"`
+4. Push to your forked repository: `git push origin my-feature`
+5. Submit a pull request to the main repository.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Acknowledgments
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- The creators and maintainers of React, marked.js, highlight.js, and Bootstrap for their amazing tools and libraries.
+- [Amaan Shamim Khan](https://github.com/AmaanShamim) developer behind the scenes
